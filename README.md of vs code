@@ -1,0 +1,29 @@
+# Cricket Performance Analyzer
+
+#### Video Demo: https://youtu.be/gHNY036RcOU
+
+#### Description
+
+Cricket Performance Analyzer is a Python command-line application developed as my CS50P final project. It calculates batting, bowling, and fielding statistics to help cricket players understand and evaluate their performances.
+
+The application has three main features.
+
+**Batting Statistics:** The batting calculator accepts runs scored, balls faced, and times dismissed. It calculates the batting strike rate and batting average. It also checks inputs and applies a custom minimum-balls rule to flag scores that do not meet the project's chosen threshold.
+
+**Bowling Statistics:** The bowling calculator accepts runs conceded, wickets taken, and legal balls bowled. It calculates overs bowled, economy rate, bowling average, and bowling strike rate. It handles cases where no wickets have been taken by displaying unavailable statistics instead of dividing by zero.
+
+**Fielding Statistics:** The fielding calculator records catches, run-outs, stumpings, and missed chances. It calculates total successful fielding contributions and a custom fielding success rate. The program rejects a combined total of more than 10 catches, run-outs, and stumpings under the project's validation rule.
+
+#### Design Decisions
+
+I organized the project into separate functions so that each calculation can be tested independently. The `main()` function displays the menu and directs the user to the selected calculator. Input validation helps prevent invalid values, while exception handling provides clear error messages for incorrect statistics.
+
+I used Python's built-in features for the calculations, avoiding unnecessary external dependencies. I also created `test_project.py` to test the calculation functions, including invalid inputs and edge cases. The tests use pytest.
+
+This project helped me practise Python functions, conditionals, loops, exception handling, input validation, and automated testing. It also gave me an opportunity to apply programming concepts to a sport I enjoy.
+
+#### Files
+
+- `project.py` — main application and statistics calculations.
+- `test_project.py` — automated tests for the calculation functions.
+- `README.md` — project documentation and usage information.
